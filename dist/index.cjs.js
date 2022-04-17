@@ -1872,7 +1872,7 @@ var Icon$m = function (props) {
 var Logo$1 = function (_a) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
     return (React__default["default"].createElement(Svg, __assign({ viewBox: "0 0 205 26" }, props),
-        React__default["default"].createElement("image", { width: "100", height: "26", href: isDark ? '/images/icicb/icicb_logo.png' : '/images/icicb/icicb_logo.png' })));
+        React__default["default"].createElement("image", { width: "100", height: "26", href: isDark ? '/images/icicb/Babylon.png' : '/images/icicb/Babylon.png' })));
 };
 
 var Icon$l = function (props) {

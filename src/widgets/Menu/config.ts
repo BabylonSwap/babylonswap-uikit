@@ -117,27 +117,27 @@ export const socials = [
   {
     label: "Discord",
     icon: "DiscordIcon",
-    href: "https://icicb.com/",
+    href: "https://babylonswap.finance/",
   },
   {
     label: "Twitter",
     icon: "TwitterIcon",
-    href: "https://icicb.com/",
+    href: "https://babylonswap.finance/",
   },
   {
     label: "Facebook",
     icon: "FacebookIcon",
-    href: "https://icicb.com/",
+    href: "https://babylonswap.finance/",
   },
   {
     label: "Telegram",
     icon: "TelegramIcon",
-    href: "https://icicb.com/",
+    href: "https://babylonswap.finance/",
   },
   {
     label: "Reddit",
     icon: "RedditIcon",
-    href: "https://icicb.com/",
+    href: "https://babylonswap.finance/",
   },
   // {
   //   label: "Telegram",

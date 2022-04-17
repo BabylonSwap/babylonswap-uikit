@@ -1,3 +1,3 @@
-# ICICB_DEX UIkit
+# Babylon_DEX UIkit
 
-This is ICICB DEX UIKIT
+This is Babylon DEX UIKIT
