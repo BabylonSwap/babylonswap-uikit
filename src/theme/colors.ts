@@ -46,7 +46,7 @@ export const darkColors: Colors = {
   invertedContrast: "#f4f7fa",
   input: "white",
   primaryDark: "#0098A1",
-  tertiary: "white",
+  tertiary: "#090805",
   text: "#e4e8ea",//7466af
   textDisabled: "#666171",
   textSubtle: "#b8b8b8",
