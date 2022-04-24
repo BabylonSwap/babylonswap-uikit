@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Handle = styled.div`
-  background-color: ${({ theme }) => theme.toggle.handleBackground};
+  background-color: #7645d9;
   border-radius: 50%;
   cursor: pointer;
   left: 4px;
@@ -9,6 +9,7 @@ export const Handle = styled.div`
   top: 4px;
   transition: left 200ms ease-in;
   width: 32px;
+  height:32px;
   z-index: 1;
 `;
 

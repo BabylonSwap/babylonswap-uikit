@@ -8,7 +8,7 @@ type InactiveButtonProps = {
   colorKey: "primary" | "textSubtle";
 } & ButtonMenuItemProps;
 
-const InactiveButton = styled(Button)<InactiveButtonProps>`
+const InactiveButton = styled(Button) <InactiveButtonProps>`
   background-color: transparent;
   height:50px;
   color: ${({ theme, colorKey }) => theme.colors[colorKey]};

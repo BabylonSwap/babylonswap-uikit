@@ -1167,10 +1167,7 @@ var Skeleton = function (_a) {
 };
 var templateObject_1$h, templateObject_2$8, templateObject_3$5, templateObject_4$2, templateObject_5$1;
 
-var Handle = styled__default["default"].div(templateObject_1$g || (templateObject_1$g = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: 50%;\n  cursor: pointer;\n  left: 4px;\n  position: absolute;\n  top: 4px;\n  transition: left 200ms ease-in;\n  width: 32px;\n  z-index: 1;\n"], ["\n  background-color: ", ";\n  border-radius: 50%;\n  cursor: pointer;\n  left: 4px;\n  position: absolute;\n  top: 4px;\n  transition: left 200ms ease-in;\n  width: 32px;\n  z-index: 1;\n"])), function (_a) {
-    var theme = _a.theme;
-    return theme.toggle.handleBackground;
-});
+var Handle = styled__default["default"].div(templateObject_1$g || (templateObject_1$g = __makeTemplateObject(["\n  background-color: #7645d9;\n  border-radius: 50%;\n  cursor: pointer;\n  left: 4px;\n  position: absolute;\n  top: 4px;\n  transition: left 200ms ease-in;\n  width: 32px;\n  height:32px;\n  z-index: 1;\n"], ["\n  background-color: #7645d9;\n  border-radius: 50%;\n  cursor: pointer;\n  left: 4px;\n  position: absolute;\n  top: 4px;\n  transition: left 200ms ease-in;\n  width: 32px;\n  height:32px;\n  z-index: 1;\n"])));
 var Input = styled__default["default"].input(templateObject_2$7 || (templateObject_2$7 = __makeTemplateObject(["\n  cursor: pointer;\n  opacity: 0;\n  height: 100%;\n  position: absolute;\n  width: 100%;\n  z-index: 3;\n\n  &:checked + ", " {\n    left: calc(100% - 36px);\n  }\n\n  &:focus + ", " {\n    box-shadow: ", ";\n  }\n\n  &:hover + ", ":not(:disabled):not(:checked) {\n    box-shadow: ", ";\n  }\n"], ["\n  cursor: pointer;\n  opacity: 0;\n  height: 100%;\n  position: absolute;\n  width: 100%;\n  z-index: 3;\n\n  &:checked + ", " {\n    left: calc(100% - 36px);\n  }\n\n  &:focus + ", " {\n    box-shadow: ", ";\n  }\n\n  &:hover + ", ":not(:disabled):not(:checked) {\n    box-shadow: ", ";\n  }\n"])), Handle, Handle, function (_a) {
     var theme = _a.theme;
     return theme.shadows.focus;
