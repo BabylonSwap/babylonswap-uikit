@@ -127,13 +127,7 @@ const Menu: React.FC<NavProps> = ({
                 </Flex>
             </StyledNav>
 
-            <MenuButton aria-label="Toggle menu" onClick={() => setIsPushed((prevState: boolean) => !prevState)} mr="24px">
-                {isPushed ? (
-                    <HamburgerCloseIcon width="24px" color="textSubtle" />
-                ) : (
-                    <HamburgerIcon width="24px" color="textSubtle" />
-                )}
-            </MenuButton>
+
             <BodyWrapper>
                 <Panel
                     isPushed={isPushed}

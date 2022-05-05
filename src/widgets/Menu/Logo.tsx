@@ -7,10 +7,10 @@ import { HamburgerIcon, HamburgerCloseIcon, LogoIcon as LogoWithText } from "./i
 import MenuButton from "./MenuButton";
 
 interface Props {
-	isPushed: boolean;
-	isDark: boolean;
-	togglePush: () => void;
-	href: string;
+    isPushed: boolean;
+    isDark: boolean;
+    togglePush: () => void;
+    href: string;
 }
 
 const StyledLink = styled(Link)`
@@ -31,25 +31,29 @@ const StyledLink = styled(Link)`
 `;
 
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
-	const isAbsoluteUrl = href.startsWith("http");
-	const innerLogo = (
-		<>
-			<LogoIcon className="mobile-icon" />
-			<LogoWithText className="desktop-icon" isDark={isDark} width="400px" />
-		</>
-	);
+    const isAbsoluteUrl = href.startsWith("http");
+    const innerLogo = (
+        <>
+            <LogoIcon className="mobile-icon" />
+            <LogoWithText className="desktop-icon" isDark={isDark} width="400px" />
+        </>
+    );
 
-	return (
-		<Flex>
-			{isPushed ? (
-				<StyledLink to={href} aria-label="home page">
-					{innerLogo}
-				</StyledLink>
-			) : (
-				""
-			)}
-		</Flex>
-	);
+    return (
+        <Flex>
+            {isPushed ? (
+                <StyledLink to={href} aria-label="home page"  onClick={togglePush} >
+                    {innerLogo}
+                </StyledLink>
+            ) : (
+                <MenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px">
+                    {(
+                        <HamburgerIcon width="24px" color="textSubtle" />
+                    )}
+                </MenuButton>
+            )}
+        </Flex>
+    );
 };
 
 export default Logo;
