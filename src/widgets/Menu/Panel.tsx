@@ -39,7 +39,7 @@ const Panel: React.FC<Props> = (props) => {
   return (
     <StyledPanel isPushed={isPushed} showMenu={showMenu}>
       <PanelBody {...props} />
-      <PanelFooter {...props} />
+      {/* <PanelFooter {...props} /> */}
     </StyledPanel>
   );
 };
