@@ -2287,20 +2287,47 @@ var PanelBody = function (_a) {
     var location = reactRouterDom.useLocation();
     // Close the menu when a user clicks a link on mobile
     var handleClick = isMobile ? function () { return pushNav(false); } : undefined;
-    return (React__default["default"].createElement(Container, null, links.map(function (entry) {
-        var Icon = Icons[entry.icon];
-        var iconElement = React__default["default"].createElement(Icon, { width: "24px", mr: "8px" });
-        var calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
-        if (entry.items) {
-            return (React__default["default"].createElement(Accordion, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, initialOpenState: entry.initialOpenState, className: calloutClass }, isPushed &&
-                entry.items.map(function (item) { return (React__default["default"].createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: handleClick },
-                    React__default["default"].createElement(MenuLink, { href: item.href }, item.label))); })));
+    var addTokenToMetamask = function () {
+        var tokenAddress = "0xe329102DA0E7E135656CD72CDc983c81f27CB5B6";
+        var tokenSymbol = "XBT";
+        var tokenDecimals = 18;
+        var tokenImage = "https://babylonswap.finance/favicon.ico";
+        try {
+            // wasAdded is a boolean. Like any RPC method, an error may be thrown.
+            window.ethereum.request({
+                method: "wallet_watchAsset",
+                params: {
+                    type: "ERC20",
+                    options: {
+                        address: tokenAddress,
+                        symbol: tokenSymbol,
+                        decimals: tokenDecimals,
+                        image: tokenImage, // A string url of the token logo
+                    },
+                },
+            });
         }
-        return (React__default["default"].createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
-            React__default["default"].createElement(MenuLink, { href: entry.href, onClick: handleClick },
-                iconElement,
-                React__default["default"].createElement(LinkLabel, { isPushed: isPushed }, entry.label))));
-    })));
+        catch (error) {
+            console.log(error);
+        }
+    };
+    return (React__default["default"].createElement(Container, null,
+        React__default["default"].createElement(MenuEntry, { key: "Add Babylon To MetaMask", isActive: false },
+            React__default["default"].createElement(LinkLabel, { isPushed: isPushed, onClick: function () { addTokenToMetamask(); } }, "Add Babylon To MetaMask")),
+        links.map(function (entry) {
+            var Icon = Icons[entry.icon];
+            var iconElement = React__default["default"].createElement(Icon, { width: "24px", mr: "8px" });
+            var calloutClass = entry.calloutClass ? entry.calloutClass : undefined;
+            if (entry.items) {
+                return (React__default["default"].createElement(Accordion, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, initialOpenState: entry.initialOpenState, className: calloutClass }, isPushed &&
+                    entry.items.map(function (item) { return (React__default["default"].createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: handleClick },
+                        React__default["default"].createElement(MenuLink, { href: item.href }, item.label))); })));
+            }
+            return (React__default["default"].createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
+                React__default["default"].createElement(MenuLink, { href: entry.href, onClick: handleClick },
+                    iconElement,
+                    React__default["default"].createElement(LinkLabel, { isPushed: isPushed }, entry.label))));
+        })));
 };
 var templateObject_1$8;
 
